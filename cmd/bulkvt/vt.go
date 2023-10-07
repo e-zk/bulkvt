@@ -41,6 +41,7 @@ type domainResp struct {
 			Reputation        float64                      `json:"reputation"`
 			TotalVotes        map[string]float64           `json:"total_votes"`
 		} `json:"attributes"`
+		Id string `json:"id"`
 	} `json:"data"`
 }
 
@@ -74,8 +75,8 @@ func getDomainReport(domain string) (domainResp, error) {
 	return jsonResp, nil
 }
 
-func getDomainReportConc(addr string, ch chan<- ipResp) {
-	res, err := getIpReport(addr)
+func getDomainReportConc(domain string, ch chan<- domainResp) {
+	res, err := getDomainReport(domain)
 	if err != nil {
 		fmt.Printf("error: %v\n", err)
 	}
