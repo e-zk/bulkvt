@@ -3,6 +3,12 @@ bulkvt
 quick+dirty bulk VirusTotal score checker.
 takes list from stdin. runs api requests concurrently.
 
+
+install
+-------
+	go install go.zakaria.org/bulkvt@latest
+
+
 usage
 -----
 set VT_API_KEY environment variable to a valid VirusTotal API key.
@@ -12,4 +18,5 @@ set VT_API_KEY environment variable to a valid VirusTotal API key.
 		-i	report on IPs from stdin (default)
 		-d	report on domains from stdin
 		-m	only output entries with a malicious rating from >1 vendors
+
 
