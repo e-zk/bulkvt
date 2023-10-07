@@ -1,0 +1,11 @@
+bulkvt
+======
+quick+dirty bulk virus total score checker.
+takes list from stdin. runs api requests concurrently.
+
+usage
+-----
+	usage: bulkvt [-m]
+	where:
+		-m	only output entries tagged as malicious
+
