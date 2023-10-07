@@ -1,11 +1,15 @@
 bulkvt
 ======
-quick+dirty bulk virus total score checker.
+quick+dirty bulk VirusTotal score checker.
 takes list from stdin. runs api requests concurrently.
 
 usage
 -----
+set VT_API_KEY environment variable to a valid VirusTotal API key.
+
 	usage: bulkvt [-m]
 	where:
-		-m	only output entries tagged as malicious
+		-i	report on IPs from stdin (default)
+		-d	report on domains from stdin
+		-m	only output entries with a malicious rating from >1 vendors
 
